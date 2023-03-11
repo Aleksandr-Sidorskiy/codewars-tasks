@@ -108,22 +108,67 @@ function filter_list(l) {
   return l.filter((value) => Number.isFinite(value));
 }
 // console.log(filter_list([1, 2, "a", "b"]));
-console.log(filter_list([1, "a", "b", 0, 15]));
+// console.log(filter_list([1, "a", "b", 0, 15]));
 // console.log(filter_list([1, 2, "aasf", "1", "123", 123]));
-console.log(
-  filter_list([
-    943,
-    "380",
-    106,
-    495,
-    "765",
-    376,
-    "600",
-    "987",
-    "290",
-    544,
-    "Y",
-    "",
-    "959",
-  ])
-);
+// console.log(
+//   filter_list([
+//     943,
+//     "380",
+//     106,
+//     495,
+//     "765",
+//     376,
+//     "600",
+//     "987",
+//     "290",
+//     544,
+//     "Y",
+//     "",
+//     "959",
+//   ])
+// );
+
+/**
+ * Ваша задача - написати функцію, яка може
+ * приймати в якості аргументу будь-яке невід'ємне ціле число і
+ *  повертати його цифрами у порядку спадання.
+ * По суті, переставити цифри так,
+ *  щоб отримати максимально можливе число.
+ */
+function descendingOrder(n) {
+  const arr = [...n.toString()].sort((a, b) => b - a).join("");
+  return Number(arr);
+}
+// console.log(descendingOrder(0));
+// console.log(descendingOrder(1));
+// console.log(descendingOrder(111));
+// console.log(descendingOrder(15));
+// console.log(descendingOrder(1021));
+// console.log(descendingOrder(123456789));
+
+/**
+ *За заданими двома цілими числами a та b,
+  які можуть бути як додатними, так і від'ємними, знайдіть суму 
+  всіх цілих чисел між ними і поверніть її. 
+  Якщо числа рівні, то вивести a або b.
+
+Зауваження: числа a та b не впорядковані!
+ */
+function getSum(a, b) {
+  let sum = 0;
+  if (a > b) {
+    for (let i = b; i <= a; i += 1) {
+      sum += i;
+    }
+  } else {
+    for (let i = a; i <= b; i += 1) {
+      sum += i;
+    }
+  }
+  return sum;
+}
+
+console.log(getSum(5, -1));
+console.log(getSum(0, 1));
+console.log(getSum(588, 598));
+console.log(getSum(-149, -195));
