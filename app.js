@@ -168,7 +168,39 @@ function getSum(a, b) {
   return sum;
 }
 
-console.log(getSum(5, -1));
-console.log(getSum(0, 1));
-console.log(getSum(588, 598));
-console.log(getSum(-149, -195));
+// console.log(getSum(5, -1));
+// console.log(getSum(0, 1));
+// console.log(getSum(588, 598));
+// console.log(getSum(-149, -195));
+/**
+ * 
+Нам потрібна функція, яка може перетворити число (ціле число) у рядок.
+ */
+
+function numberToString(num) {
+  const string = num;
+  console.log(typeof string);
+  return string;
+}
+
+// console.log(numberToString(67));
+
+/**
+ * Вам потрібно написати дві функції (max і min,
+ *  або максимум і мінімум і т.д., в залежності від мови),
+ * які отримують на вхід список
+ *  цілих чисел і повертають найбільше і найменше
+ * число у цьому списку відповідно.
+ */
+var min = function (list) {
+  return Math.min.apply(null, list);
+};
+
+var max = function (list) {
+  return Math.max.apply(null, list);
+};
+
+console.log(min([-52, 56, 30, 29, -54, 0, -110]));
+console.log(min([42, 54, 65, 87, 0]));
+console.log(max([4, 6, 2, 1, 9, 63, -134, 566]));
+console.log(max([5]));
