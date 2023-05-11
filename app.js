@@ -200,7 +200,58 @@ var max = function (list) {
   return Math.max.apply(null, list);
 };
 
-console.log(min([-52, 56, 30, 29, -54, 0, -110]));
-console.log(min([42, 54, 65, 87, 0]));
-console.log(max([4, 6, 2, 1, 9, 63, -134, 566]));
-console.log(max([5]));
+// console.log(min([-52, 56, 30, 29, -54, 0, -110]));
+// console.log(min([42, 54, 65, 87, 0]));
+// console.log(max([4, 6, 2, 1, 9, 63, -134, 566]));
+// console.log(max([5]));
+
+/**
+ * Створіть функцію, яка отримує ціле число як
+ * аргумент і повертає "Even" для парних чисел або "Odd" для непарних.
+ */
+function evenOrOdd(number) {
+  return number % 2 === 0 ? "Even" : "Odd";
+}
+
+// console.log(evenOrOdd(2));
+// console.log(evenOrOdd(7));
+// console.log(evenOrOdd(-42));
+// console.log(evenOrOdd(3));
+
+/**
+ * Розглянемо масив/список овець,
+ *  у якому деякі вівці можуть бути відсутніми
+ * на своїх місцях. Нам потрібна функція, яка
+ * підраховує кількість овець,
+ * присутніх у масиві (true означає, що вони присутні).
+ */
+function countSheeps(arrayOfSheep) {
+  return arrayOfSheep.filter((sheep) => sheep === true).length;
+}
+let array1 = [
+  true,
+  true,
+  true,
+  false,
+  true,
+  true,
+  true,
+  true,
+  true,
+  false,
+  true,
+  false,
+  true,
+  false,
+  false,
+  true,
+  true,
+  true,
+  true,
+  true,
+  false,
+  false,
+  true,
+  true,
+];
+console.log(countSheeps(array1));
